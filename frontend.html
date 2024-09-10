@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Allure Travel</title>
+   <style>
+           * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+           }
+
+           body {
+               font-family: Arial, sans-serif;
+               line-height: 1.6;
+           }
+           
+           nav ul li:hover{
+                   border-bottom:2px solid black;
+           }
+
+           header {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               padding: 20px;
+               background-color: white;
+               position: sticky;
+               top: 0;
+               z-index: 1000;
+	      
+           }
+
+           .logo img {
+                   width:200px;
+                   height:100px;
+           }
+
+           nav ul {
+               list-style-type: none;
+               display: flex;
+               gap: 20px;
+           }
+
+           nav ul li a {
+               text-decoration: none;
+               color: #333;
+               font-weight: bold;
+           }
+
+           .social-icons a img {
+               width: 24px;
+               margin-left: 15px;
+           }
+
+           /* Ademide Tanimomo */
+           .hero {
+               background-image: url('pexels-asadphoto-457882 2.jpg');
+               background-size: cover;
+               background-position: center;
+               height: 100vh;
+               position: relative;
+               color: white;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+           }
+
+           .hero-text h2 {
+               font-size: 48px;
+               text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+               text-align: center;
+           }
+
+          
+           .welcome {
+               padding: 50px;
+               text-align: center;
+               background-color: #f4f4f4;
+               font-size: 18px;
+           }
+
+          
+           .footer {
+               background-color: #1a1a1a;
+               color: white;
+               padding: 40px 20px;
+               text-align: center;
+           }
+
+           .footer .container {
+               max-width: 1200px;
+               margin: auto;
+           }
+
+           .footer-columns {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+           }
+
+           .footer-column {
+               flex: 1;
+               min-width: 250px;
+               margin-bottom: 20px;
+           }
+
+           .footer h4 {
+               font-size: 24px;
+               margin-bottom: 15px;
+           }
+
+           .footer p, .footer ul {
+               font-size: 16px;
+               margin-bottom: 10px;
+           }
+
+           .footer ul {
+               list-style: none;
+               padding: 0;
+           }
+
+           .footer ul li {
+               margin-bottom: 10px;
+           }
+
+           .footer ul li a {
+               color: white;
+               text-decoration: none;
+           }
+
+           .footer ul li a:hover {
+               text-decoration: underline;
+           }
+
+           .social-media {
+               list-style: none;
+               padding: 0;
+           }
+
+           .social-media li {
+               margin-bottom: 10px;
+           }
+
+           .footer-bottom {
+               margin-top: 40px;
+               border-top: 1px solid #444;
+               padding-top: 20px;
+           }
+
+           .footer-bottom p {
+               margin: 0;
+               font-size: 14px;
+               color: #888;
+           }
+           
+           .header {
+                    background-color: #0066ff;
+                    color: white;
+                    padding: 20px 0;
+                    text-align: center;
+		     background-image:url ("egg1.png");
+                }
+                .header h1 {
+                    margin: 0;
+                    font-size: 28px;
+                }
+                .stats {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 20px 0;
+                    background-color: #0066ff;
+                    color: white;
+                }
+                .stats div {
+                    text-align: center;
+                }
+                .stats div h2 {
+                    margin: 5px 0;
+                    font-size: 18px;
+                }
+                .features {
+                    text-align: center;
+                    padding: 40px 0;
+                    background-color: #ffffff;
+                }
+                .features h2 {
+                    margin-bottom: 20px;
+                    font-size: 24px;
+                }
+                .features .options {
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 0 20px;
+                }
+                .features .options div {
+                    width: 30%;
+                    text-align: center;
+                }
+                .features .options div img {
+                    width: 50px;
+                    margin-bottom: 15px;
+                }
+                .booking {
+                    text-align: center;
+                    background-color: #f0f4ff;
+                    padding: 40px 20px;
+                }
+                .booking h2 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                .booking form {
+                    margin: 20px 0;
+                }
+                .booking form select,
+                .booking form input {
+                    padding: 10px;
+                    margin: 5px;
+                    width: 200px;
+                }
+                .community {
+                    background-color: #ffffff;
+                    text-align: center;
+                    padding: 40px 20px;
+                }
+                .community h2 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                .community p {
+                    margin-bottom: 20px;
+                }
+                .community button {
+                    padding: 10px 20px;
+                    background-color: #0066ff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+              
+
+                /* Mobile Responsive Styles */
+                @media (max-width: 768px) {
+                    .stats {
+                        flex-direction: column;
+                    }
+                    .features .options {
+                        flex-direction: column;
+                    }
+                    .features .options div {
+                        width: 90%;
+                        margin-bottom: 20px;
+                    }
+                    .booking form select,
+                    .booking form input {
+                        width: 100%;
+                        max-width: 300px;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .header h1 {
+                        font-size: 24px;
+                    }
+                    .stats div h2 {
+                        font-size: 16px;
+                    }
+                    .features h2, .booking h2, .community h2 {
+                        font-size: 20px;
+                    }
+                    
+                    .booking select option{
+                            margin:5px;
+                    }
+                }
+           
+  
+           
+   </style>
+</head>
+<body>
+    <!-- Ademide Tanimomo-->
+    <header>
+        <div class="logo">
+            <img src="21012347-f0b6-4dac-b585-dfbcd551d5bc 2.jpg" >
+           
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="conc.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https:wa.me//07055480493?text=Hello%20Ademide"><img src="whatsapp.png" alt="Whatsapp"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </header>
+
+   
+    <section class="hero">
+        <div class="hero-text">
+            <h2>For vacation travelers who expect more</h2>
+        </div>
+    </section>
+
+  
+    <main>
+        <section class="welcome">
+            <p>For travelers who expect more, Allure Travel by CTM specializes in designing tailored vacation and travel experiences to make your trip exceptional.</p>
+        </section>
+    </main>
+    
+    <!--remains>
+            <-->
+	  
+            <div class="header">
+                   <h1>Camping Page</h1>
+               </div>
+
+               <div class="stats">
+                   <div>
+                       <h2>10</h2>
+                       <p>Years of Experience</p>
+                   </div>
+                   <div>
+                       <h2>1K+</h2>
+                       <p>Camping Destinations</p>
+                   </div>
+                   <div>
+                       <h2>8K</h2>
+                       <p>Happy Customers</p>
+                   </div>
+		   
+                   <div>
+                       <h2>4.2</h2>
+                       <p>Overall Rating</p>
+                   </div>
+               </div>
+
+               <div class="features">
+                       
+                       
+                   <h2>That The Way To Camp!</h2>
+                   <p>Try a variety of benefits when using our services.</p>
+                   <div class="options">
+                       <div>
+                           <img src="pexels-teemu-r-555088-1840421.jpg" style="width:200px; height:200px; border-radius:50%; box-shadow:2px 1px 3px black;">
+                           <h3>Lot Of Choices</h3>
+                           <p>We have 1K+ camping destinations that work with us.</p>
+                       </div>
+                       
+                       
+                       <div>
+                           <img src="pexels-mohamedelaminemsiouri-2108845.jpg" style="width:200px; height:200px; border-radius:50%; box-shadow:2px 1px 3px black;" >
+                           <h3>Best Camp Guide</h3>
+                           <p>Our camp guide is ready to guide you anytime & anywhere.</p>
+                       </div>
+                       
+                       
+                       <div>
+                           <img src="pexels-shvetsa-3987020.jpg" style="width:200px; height:200px; border-radius:50%; box-shadow:2px 1px 3px black;">
+                           <h3>Easy Booking</h3>
+                           <p>With an easy, safe, and fast ticket purchase process.</p>
+                       </div>
+                       
+                       
+                   </div>
+               </div>
+
+               <div class="booking">
+                   <h2>Forest, Starry Night, Campfire, What Else Do You Need?</h2>
+                   <p>Explore more than 1k camping destinations, find your most comfortable place to camp and book now.</p>
+                   <form>
+                           
+                           
+                       <select name="location" required>
+                           <option value="" disabled selected>Choose Destination</option>
+                           <option value="1">Mountain Camp</option>
+                           <option value="2">Beach Camp</option>
+                       </select>
+                       
+                       
+                       <input type="date" name="date" required>
+                       <br><br>
+                       <button type="submit" style="padding:10px; width:80px; text-align:center; font-weight:bold;">Search</button>
+                   </form>
+               </div>
+
+               <div class="community">
+                   <h2>Community Service Is Calling, No Need For Stalling.</h2>
+                   <p>Want more fun camping? Join our community to get friends to camp together and feel the sensation.</p>
+                   <button>Join Community</button>
+               </div>
+
+            
+            
+    
+
+   
+   <footer class="footer">
+       <div class="container">
+           <div class="footer-columns">
+               <!-- Column 1: Company Info -->
+               <div class="footer-column">
+                   <h4>Marties Ltd.</h4>
+                   <p>123 Delicious Lane</p>
+                   <p>Food City, FC 12345</p>
+                   <p>Email: tanimomoademide@gmail.com</p>
+                   <p>Phone: (234) 706-330-7582</p>
+               </div>
+
+               <!-- Column 2: Quick Links -->
+               <div class="footer-column">
+                   <h4>Quick Links</h4>
+                   <ul>
+                       <li><a href="frontend.html">Home</a></li>
+                       <li><a href="about.html">About Us</a></li>
+                       <li><a href="conc.html">Contact Us</a></li>
+		        <li><a href="#services">Services</a></li>
+                   </ul>
+               </div>
+
+               <!-- Column 3: Social Media -->
+               <div class="footer-column">
+                   <h4>Follow Us</h4>
+                   <p>Stay connected through our social media channels:</p>
+                   <ul class="social-media">
+                       <li><a href="#">Facebook</a></li>
+                       <li><a href="#">Instagram</a></li>
+                       <li><a href="https://wa.me/message/2QAIMOFFDRLLF1">Whatsapp</a></li>
+                       <li><a href="#">LinkedIn</a></li>
+                   </ul>
+               </div>
+           </div>
+
+           <!-- Footer Bottom -->
+           <div class="footer-bottom">
+               <p>&copy; 2024 Marties Ltd. All Rights Reserved.</p>
+           </div>
+       </div>
+   </footer>
+   
+    
+   
+    
+    <script>
+       
+    </script>
+</body>
+</html>
+
+
